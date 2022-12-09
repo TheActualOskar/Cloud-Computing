@@ -1,0 +1,12 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  server:
+    build: .
+    ports:
+      - "8000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=development
+      - MONGO_DB_CONNECTION_STRING="mongodb+srv://Oskar:mdXMayN05XfjctXf@mydb.hy6ay3o.mongodb.net/?retryWrites=true&w=majority"
+      - MONGO_DB_NAME=MyDB
+      - REDIS_URI=rediss://default:AVNS_F-xn4kdWxzSRLRhGlKh@redis-686a7c1-oskar-8026.aivencloud.com:10564
